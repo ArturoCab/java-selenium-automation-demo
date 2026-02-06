@@ -31,11 +31,7 @@ WebDriverManager
 Google Chrome
 
 📂 Project Structure
-src
- └── test
-     └── java
-         └── tests
-             └── LoginTest.java
+src/test/java/tests/LoginTest.java
 
 
 This is a test-focused project, so no src/main/java is required.
