@@ -19,17 +19,19 @@ public class LoginTest{
 
     @Test
     void sucessfulLogin(){
-        driver.get("https://the-internet.herouapp.com/login");
-        driver.findElement(By.id("username")).sendKeys("tomsmith");
-        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
+        driver.get("https://practicetestautomation.com/practice-test-login/");
+        driver.findElement(By.id("username")).sendKeys("student");
+        driver.findElement(By.id("password")).sendKeys("Password123");
+        driver.findElement(By.cssSelector("button[id='submit']")).click();
 
-        WebElement mensaje = driver.findElement(By.id("flash"));
-        assertTrue(mensaje.getText().contains("You logged into a secure area!"));
+        WebElement mensaje = driver.findElement(By.className("post-title"));
+        assertTrue(mensaje.getText().contains("Logged In Successfully"));
     }
 
     @AfterEach 
     void tearDown(){
         driver.quit();
     }
+
+
 }
